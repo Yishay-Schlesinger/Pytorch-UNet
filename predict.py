@@ -110,4 +110,6 @@ if __name__ == '__main__':
 
         if args.viz:
             logging.info(f'Visualizing results for image {filename}, close to continue...')
-            plot_img_and_mask(img, mask)
+            mask_as_image = mask_to_image(mask)
+            mask_image_as_np_array = np.array(mask_as_image)
+            plot_img_and_mask(img, mask_image_as_np_array)
